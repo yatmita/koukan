@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Yakusoku PWA — design tokens
+ * Warm, gentle palette inspired by Kaia + Japanese paper feel.
+ * Migrated from Claude Design wireframe tokens.css.
+ * ------------------------------------------------------------------ */
+
+@theme {
+    /* Surface */
+    --color-bg-page: #efe8dc; /* canvas behind phones — warm linen */
+    --color-bg-app: #fbf8f4; /* phone screen background — cream */
+    --color-bg-elev: #ffffff; /* cards */
+    --color-bg-soft: #f5efe5; /* subtle fill */
+    --color-bg-soft-2: #ece4d5; /* press / selected */
+
+    /* Ink */
+    --color-ink: #2a2622;
+    --color-ink-2: #5c544b;
+    --color-ink-3: #9a9087;
+    --color-ink-4: #c3baad;
+
+    /* Lines */
+    --color-line: #e2dace;
+    --color-line-strong: #c9bfb0;
+
+    /* Accent — warm Kaia */
+    --color-accent: #e97b36;
+    --color-accent-deep: #c45f1f;
+    --color-accent-soft: #fce6d2;
+    --color-accent-tint: #fff3e7;
+
+    /* Status */
+    --color-status-pending: #c8923b;
+    --color-status-ack: #5b7bae;
+    --color-status-paid: #7a8e5c;
+    --color-status-pending-bg: #fbefd7;
+    --color-status-ack-bg: #e2ebf5;
+    --color-status-paid-bg: #e8eedc;
+
+    /* Danger (warnings, irreversible actions) */
+    --color-danger: #b3261e;
+    --color-danger-strong: #8b1a13;
+    --color-danger-bg: #fbe7e5;
+    --color-danger-line: #e8a39e;
+
+    /* Annotation (for dev wireframe view) */
+    --color-note-bg: #fff6cf;
+    --color-note-ink: #4a3d14;
+    --color-note-line: #c7a437;
+
+    /* Typography */
+    --font-jp:
+        "Hiragino Maru Gothic ProN", "Hiragino Kaku Gothic ProN", "Yu Gothic UI",
+        "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 28px;
+
+    /* Shadow */
+    --shadow-card:
+        0 1px 0 rgb(42 38 34 / 0.04), 0 6px 18px rgb(42 38 34 / 0.05);
+    --shadow-phone:
+        0 2px 0 rgb(42 38 34 / 0.08), 0 18px 40px rgb(42 38 34 / 0.12),
+        0 60px 120px rgb(42 38 34 / 0.1);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-jp);
+    color: var(--color-ink);
+    background: var(--color-bg-page);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Hide scrollbars on inner scroll regions (mobile feel) */
+.scroll-hide::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.scroll-hide {
+    scrollbar-width: none;
+}
+
+/* 数字を等幅にする（金額表記用） */
+.tabular-nums {
+    font-feature-settings: "tnum";
+}

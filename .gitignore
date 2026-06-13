@@ -1,0 +1,40 @@
+# Foundry
+/cache/
+/out/
+/broadcast/
+!/broadcast/**/dry-run/
+
+# Forge dependencies (re-install with `forge install`)
+/lib/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+*.t.sol.gas-snapshot
+.gas-snapshot
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Agent / harness state (混入防止の保険)
+.claude/
+.opencode/
+AGENTS.md
+CLAUDE.md
+progress.md
+prompt*.md
+review_prompt*.md
+ralph_loop*.toml

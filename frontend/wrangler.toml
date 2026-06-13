@@ -1,0 +1,9 @@
+name = "yakusoku-frontend"
+compatibility_date = "2026-05-22"
+
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
+
+# Custom domain は Cloudflare ダッシュボードで設定:
+#   yakusoku.yatmita.com → yakusoku-frontend Worker
